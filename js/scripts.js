@@ -1,58 +1,41 @@
 
-// NOT
+// creo un'array di oggetti 
 
+const Team = [
 
-// crea bottone 
-const PlayButton = document.getElementById('play_btn');
+    Memberone = {
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        photo: 'wayne-barnett-founder-ceo.jpg'
+    },
 
-// quando l'utente clicca il bottone allora
+    Membertwo = {
+        name: 'Angela Caroll',
+        role: 'Chief Editor	',
+        photo: 'angela-caroll-chief-editor.jpg'
+    },
 
-PlayButton.addEventListener('click', function() {
+    Memberthree = {
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        photo: 'walter-gordon-office-manager.jpg'
+    },
 
-    // contenitore della griglia
-    const Grid = document.getElementById('grid_container');
-    console.log('Grid', Grid, typeof Grid);
+    Memberfour = {
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        photo: 'angela-lopez-social-media-manager.jpg'
+    },
 
-    for(let i = 1; i <=100; i++) {
-
-        const NewCell = document.createElement('div');
-        NewCell.classList.add("grid_container_cells");
-        console.log('Nuova Cella', NewCell, typeof NewCell);
-        NewCell.innerHTML =  i;
-        const NewCellNum = parseInt(NewCell.innerHTML);
-
-        // aggiungo le nuova celle al contenitore della griglia
-        Grid.append(NewCell);
-        
-        NewCell.addEventListener('click', function() {
-            NewCell.classList.add("cells_clicked");
-            console.log(NewCell.innerHTML);
-
-
-            if(Bombs.includes(NewCellNum)) {
-                NewCell.classList.add("bombs_cell")
-            }
-        })
+    Memberfive = {
+        name: 'Scott Estrada',
+        role: 'Developer',
+        photo: 'scott-estrada-developer.jpg'
+    },
+    Membersix = {
+        name: 'Barbara Durso',
+        role: 'Graphic Designer',
+        photo: 'barbara-ramos-graphic-designer.jpg'
     }
 
-    const Bombs = [];
-
-    // genero numeri casuali per le bombe
-    function GenerateRandomNum (min , max) {
-        return Math.floor((Math.random() * 100) + 1);
-    }
-
-    // le bombe devono essere 16
-    for( let i = 0; i <=16; i++) {
-        const RandomNum = GenerateRandomNum(1, 100);
-        console.log(RandomNum);
-        
-        // per non mettere la bomba nella stessa casella
-        if(!Bombs.includes(RandomNum)) {
-            Bombs.push(RandomNum);
-        }
-    }
-})
- 
-
-
+]
