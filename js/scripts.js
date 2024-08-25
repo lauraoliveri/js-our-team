@@ -39,3 +39,10 @@ const Team = [
     }
 
 ]
+
+// stampo in console le info di ogni membro
+
+for (let i = 0; i < Team.length; i++) {
+    console.log(Team[i]);
+    
+}
