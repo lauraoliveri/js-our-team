@@ -41,8 +41,26 @@ const Team = [
 ]
 
 // stampo in console le info di ogni membro
+const TeamContainer = document.getElementById('ourteam');
 
 for (let i = 0; i < Team.length; i++) {
     console.log(Team[i]);
-    
+
+
+     // li stampo nel DOM
+
+    TeamContainer.innerHTML += `
+        <ul>
+            <li>
+                Name: ${Team[i].name}
+            </li>
+            <li>
+                Role: ${Team[i].role}
+            </li>
+            <li>
+                <img src="img/${Team[i].photo}">
+            </li>
+        </ul>
+    `
 }
+
